@@ -1,0 +1,57 @@
+ <!--<div id="table-default" class="table-responsive">
+                            <table class=" card-table table-vcenter  datatable" id="table-reporte-solicitud">
+                                <thead class="background-thead display nowrap" align="center">
+                                    <tr>
+                                        <th align="center" class="border-bottom-0 color-th background-thead">Solicitante
+                                        </th>
+                                        <th align="center" class="border-bottom-0 color-th background-thead">Tipo
+                                            Permiso</th>
+                                        <th align="center" class="border-bottom-0 color-th background-thead">Fecha</th>
+                                        <th align="center" class="border-bottom-0 color-th background-thead">Fecha
+                                            Solicitud
+                                        </th>
+                                        <th align="center" class="border-bottom-0 color-th background-thead">Observacion
+                                        </th>
+                                        <th align="center" class="border-bottom-0 color-th background-thead">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-tbody">
+                                    @foreach ($permisos_aprobados as $p)
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="d-flex py-1 align-items-center">
+                                                <span class="avatar me-2"
+                                                    style="background-image: url('/imagenes_empleados/{{ $p->id_empleado }}.jpeg')"></span>
+                                                <div class="flex-fill">
+                                                    <div class="font-weight-medium">{{ $p-> empleado}}</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="Title">
+                                            <div>{{ $p-> tipo_permiso}}</div>
+                                        </td>
+                                        <td class="text-secondary" data-label="Role">
+                                            <div>{{ $p-> fecha_inicio}} - {{ $p-> fecha_final}}</div>
+                                            <div>{{ $p-> hora_inicio}} - {{ $p-> hora_final}}</div>
+                                        </td>
+                                        <td class="text-secondary" data-label="Role">
+                                            <div>{{ $p-> fecha_inicio}} - {{ $p-> fecha_final}}</div>
+                                            <div>{{ $p-> hora_inicio}} - {{ $p-> hora_final}}</div>
+                                        </td>
+                                        <td>
+                                            <p>{{ $p-> observacion}}</p>
+                                        </td>
+                                        <td>
+                                            @if ($p->estado == 'INGRESADO')
+                                            <span class="badge bg-green text-green-fg">{{ $p-> estado}}</span>
+                                            @elseif($p->estado == 'APROBADO')
+                                            <span class="badge bg-blue text-blue-fg">{{ $p-> estado}}</span>
+                                            @elseif($p->estado == 'RECHAZADO')
+                                            <span class="badge bg-red text-red-fg">{{ $p-> estado}}</span>
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>-->

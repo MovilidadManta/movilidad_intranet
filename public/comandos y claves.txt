@@ -1,0 +1,171 @@
+movilidad web/app-web
+levantar proyecto
+php artisan serve --host 192.168.0.105:8000
+
+1311718181
+
+Direccion y Jefatura
+
+
+Calve Open IA
+P@ul17May1993
+
+Metaetiquetas
+
+Clave Postgrest: P@ul1705
+
+
+https://fontawesome.com/v4/icons/
+https://sistemasic.manta.gob.ec/
+
+
+Maquinas virtuales
+192.168.1.120
+root
+Passw0rd.1
+
+
+//ips
+181.196.181.194
+
+5022
+
+
+
+select * from tbl_usuarios where usu_correo like '%angel%'
+
+INSERT INTO tbl_usuarios(usu_correo, usu_clave, usu_id_tipo, usu_id_empleado, usu_fecha, usu_fecha_update, usu_estado, usu_cedula)
+VALUES ('luis.briones@movilidadmanta.gob.ec', '1314571876', 9, 423, now(), now(), 'A', '1314571876')
+
+FRANCO CEDEÑO VICTOR ARMANDO
+
+
+
+Levantar Chat
+Putty
+192.168.1.222 Port 22
+User: root
+MovilidadSC/*.
+
+cd /var/www/html/movilidad-intranet
+pm2 start server.js
+en app-web php artisan queue:work redis --en proyecto php
+sudo service redis-server start
+sudo systemctl enable laravel_queue
+sudo systemctl start laravel_queue
+sudo systemctl status laravel_queue
+
+
+//revisar este comando config set stop-writes-on-bgsave-error no
+https://blog.pleets.org/article/es/misconfig-redis-is-configured-to-save-rdb-snapshots-but-its-currently-unable-to-persist-to-disk
+
+reiniciar cola
+sudo systemctl daemon-reload
+sudo systemctl restart laravel_queue.service
+
+WSL
+
+sudo reboot --reiniciar redis
+
+
+ElCambioSigue
+
+Subsistema Linux
+username: movilidad
+password: movilidad2024
+
+
+Correo:
+http://webmail.movilidadmanta.gob.ec/
+joaquin.flores@movilidadmanta.gob.ec
+movilidad2024
+
+sqcw kqbn gifm hfng
+
+juan.lema@movilidadmanta.gob.ec
+1312571852
+
+
+http://intranet.movilidadmanta.gob.ec:8080/
+1309901443
+1309901443
+
+192.168.1.222
+postgress
+MovilidadSC/*.
+
+Correo empresa
+movilidadmanta@gmail.com
+jocay2021
+
+Correo empresa 2
+movilidadmantacodigo@gmail.com
+movilidad2024
+
+
+MAIL_USERNAME=movilidadmanta@gmail.com
+MAIL_PASSWORD='sqcw kqbn gifm hfng'
+
+ptpf fwkn neyc phpx
+
+sudo apt-get install ghostscript
+
+
+
+file:///D:/proyectos/movilidad-web/app-web/public/valex/html/form-validation.html
+
+
+ $request->session()->put('usuario', $usuario->correo);
+                    $request->session()->put('tipo_usuario', $usuario->tipo_usuario);
+                    $request->session()->put('id_users', $usuario->usu_id);
+                    $request->session()->put('tipo_usuario', $usuario->tipo_usuario);
+                    $request->session()->put('ruta_foto', $usuario->emp_ruta_foto);
+                    $request->session()->put('nombres', $usuario->emp_nombre);
+                    $request->session()->put('apellidos', $usuario->emp_apellido);
+                    $request->session()->put('id_jefatura', $usuario->emp_id_perfil);
+                    $request->session()->put('id_departamento', $usuario->emp_id_departamento);
+                    $request->session()->put('id_empleado', $usuario->cod_empleado);
+                    $request->session()->put('id_cedula', $usuario->emp_cedula);
+                    $request->session()->put('id_proyecto', env('APP_ID_PROYECTO', '2'));
+
+
+
+https://platform.openai.com/playground
+
+
+select * from tbl_direcciones
+select * from tbl_jefaturas_subdirecciones
+select * from tbl_estructuras_organicas
+select * from tbl_empleados
+select * from tbl_cargos
+El empleado tiene un campo: emp_id_cargo, que se relaciona con el cargo tbl_cargos
+y columna ca_id, la tabla tbl_estructuras_organicas tiene un campo eo_id_cargo que
+se relaciona con el ca_id, la tabla tbl_estructuras_organicas tiene los campos
+eo_id_jefatura y la columna eo_id_direccion que se relaciona con las tabla 
+tbl_jefaturas_subdirecciones y tbl_direcciones respectivamente, la tabla 
+tbl_jefaturas_subdirecciones tiene la columna per_id_direccion que se relaciona con 
+la tabla tbl_direcciones
+
+
+restaurar BD
+psql -h localhost -p 5432 -U postgres -f publicidad.sql publicidad
+
+
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
+Sacar respaldo
+pg_dump -U postgres -W -h 192.168.1.226 db_sgi > db_sgi.sql
+pg_dump -U postgres -W -h 192.168.1.226 db_pagina_web > db_pagina_web.sql
+
+
+INSERT INTO tbl_usuarios_menus(um_id_usuario, um_id_submenu, um_estado, um_fecha)
+SELECT 
+ u.usu_id,
+ 115,
+ 1,
+ now()
+ FROM tbl_empleados e
+	 JOIN tbl_usuarios u ON e.emp_id = u.usu_id_empleado
+	 JOIN tbl_cod_agentes_transito a ON a.emp_id = e.emp_id
+WHERE e.emp_estado = 'A'::text
+
